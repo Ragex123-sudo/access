@@ -10,6 +10,14 @@ public class access
      if(cmd.equals("help"))
      {
         System.out.println("Here is the list of the commands");
+        System.out.println("1.tol$run");
+     }
+     System.out.println("Enter your command");
+     cmd=scanner.nextLine();
+     if(cmd.equals("tol$run"))
+     {
+      tollex obj=new tollex();
+      obj.run();
      }
     }
     public static void main(String[] args) 
@@ -19,6 +27,7 @@ public class access
          while(repeat==0)
             {
         String user_id;
+        System.out.println("Welcome to acess!");
         System.out.println("Enter your user name");
         user_id=sc.nextLine();
        int passcode= (int)(Math.random() * (500 - 100 + 1) + 100);
