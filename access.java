@@ -2,6 +2,7 @@ package main;
 import java.util.Scanner;
 public class access
 {
+       String user_id;
     void cmd()
     {
      Scanner scanner=new Scanner(System.in);
@@ -10,7 +11,10 @@ public class access
      if(cmd.equals("help"))
      {
         System.out.println("Here is the list of the commands");
+        System.out.println("0.set$run");
         System.out.println("1.tol$run");
+        System.out.println("2.con$run");
+        System.out.println("3.gam$run");
      }
      System.out.println("Enter your command");
      cmd=scanner.nextLine();
@@ -18,6 +22,23 @@ public class access
      {
       tollex obj=new tollex();
       obj.run();
+     }
+     else if(cmd.equals("set$run"))
+     {
+      String reset="\u001B[0m";
+      settings ob=new settings();
+      String maincolour=ob.main1();
+      System.out.println(maincolour+"HEllo"+reset);
+     }
+     else if (cmd.equals("con$run"))
+     {
+      conv ob=new conv();
+      ob.main();
+     }
+     else if(cmd.equals("gam$run"))
+     {
+        gam ob=new gam();
+        ob.main1();
      }
     }
     public static void main(String[] args) 
